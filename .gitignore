@@ -1,0 +1,2 @@
+# Ignore .env file in the project root directory
+.env

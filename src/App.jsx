@@ -19,7 +19,7 @@ const queryClient = new QueryClient();
 function App() {
   useEffect(() => {
     // Call API to track page hits
-    axios.post('http://localhost:3000/api/hits/hit')
+    axios.post('${process.env.REACT_APP_API_BASE_URL}/api/hits/hit')
       .then(response => {
         console.log('Page hits updated:', response.data);
       })
@@ -36,7 +36,7 @@ function App() {
           <div className="flex flex-col min-h-screen">
             <Navigation />
             <main className="flex-grow">
-              <h1>Welcome to Jetset Genius</h1>
+              <h1>Welcome to JetSetGenius</h1>
               <NewsletterForm />
               <Routes>
                 <Route path="/" element={<Index />} />
